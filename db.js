@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const homedir = require('os').homedir();
 const home = process.env.HOME || homedir;
-const filePath = path.join(home, 'task');
-// const filePath = path.join(home, '.todo');
+const filePath = path.join(home, '.todo');
 
 module.exports = {
     read: (path = filePath) => {

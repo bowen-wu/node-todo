@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
-const api = require('./index');
-
 const program = require('commander');
+const api = require('./index');
+const pkg = require('./package.json');
 
 const operator = (promise) => {
     promise.then(() => console.log('Success 🎉'), () => console.log('Fail 🤢'));
 };
+
+program.version(pkg.version);
 
 program
     .command('add')
